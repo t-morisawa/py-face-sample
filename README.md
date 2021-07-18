@@ -12,9 +12,9 @@ https://pystyle.info/perform-face-recognition-with-python/
 
 # 利用方法
 
-venvの知識を前提とします。
-
-https://qiita.com/fiftystorm36/items/b2fd47cf32c7694adc2e
+ - Python3
+ - venvの知識を前提とします
+   - https://qiita.com/fiftystorm36/items/b2fd47cf32c7694adc2e
 
 ## 環境構築
 
