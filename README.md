@@ -1,5 +1,5 @@
 
-# summary
+# py-face-sample
 
 顔認証ライブラリFace Recognitionの動作確認
 
