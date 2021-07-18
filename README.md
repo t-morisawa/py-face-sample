@@ -1,9 +1,11 @@
 
 # summary
 
+顔認証ライブラリFace Recognitionの動作確認
+
 https://github.com/ageitgey/face_recognition
 
-# インプット情報
+下記のブログのプログラムを利用
 
 https://pystyle.info/perform-face-recognition-with-python/
 
@@ -13,6 +15,8 @@ https://pystyle.info/perform-face-recognition-with-python/
 venvの知識を前提とします。
 
 https://qiita.com/fiftystorm36/items/b2fd47cf32c7694adc2e
+
+## 環境構築
 
 ```
 python -m venv venv
@@ -26,6 +30,12 @@ pip install face_recognition
 brew install cmake
 ```
 
+## 実行
+
+```
+python main.py
+```
+
 # FAQ
 ## 画像に2人以上写っていた場合
 
@@ -33,5 +43,5 @@ brew install cmake
 
 ## 処理速度
 
- - HOGモード: 4枚で0.4秒
- - CNNモード: 4枚で5秒
+ - HOGモード(精度中): 4枚で0.4秒
+ - CNNモード(精度高): 4枚で5秒
