@@ -1,15 +1,15 @@
 import face_recognition
 from time import time
 
+FILES = ["known-face_01.jpg", "known-face_02.jpg", "known-face_03.jpg"]
+MODEL = "hog"  # hog / cnn
+
+# 経過時間計測
 start = time()
-
-files = ["known-face_01.jpg", "known-face_02.jpg", "known-face_03.jpg"]
-
-MODEL = "hog"
 
 # 保存されている人物の顔の画像を読み込む。
 known_face_imgs = []
-for path in files:
+for path in FILES:
     img = face_recognition.load_image_file(path)
     known_face_imgs.append(img)
 
@@ -37,7 +37,7 @@ for img, loc in zip(known_face_imgs, known_face_locs):
 )
 
 matches = face_recognition.compare_faces(known_face_encodings, face_encoding_to_check)
-for f, match in zip(files, matches):
+for f, match in zip(FILES, matches):
     print(f"{f}: {match}")
 
 period = time() - start
