@@ -16,6 +16,10 @@ for path in FILES:
 # 認証する人物の顔の画像を読み込む。
 face_img_to_check = face_recognition.load_image_file("face_to_check.jpg")
 
+period = time() - start
+print(f"画像読み込み完了 経過時間: {period}")
+start = time()
+
 # 顔の画像から顔の領域を検出する。
 known_face_locs = []
 for img in known_face_imgs:
@@ -36,9 +40,16 @@ for img, loc in zip(known_face_imgs, known_face_locs):
     face_img_to_check, face_loc_to_check
 )
 
+period = time() - start
+print(f"特徴量抽出完了 経過時間: {period}")
+start = time()
+
+# 類似度判定
 matches = face_recognition.compare_faces(known_face_encodings, face_encoding_to_check)
-for f, match in zip(FILES, matches):
-    print(f"{f}: {match}")
 
 period = time() - start
-print(f"経過時間: {period}")
+print(f"判定完了 経過時間: {period}")
+
+
+for f, match in zip(FILES, matches):
+    print(f"{f}: {match}")

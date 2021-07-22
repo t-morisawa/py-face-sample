@@ -35,3 +35,13 @@ brew install cmake
 
  - HOGモード: 4枚で0.4秒
  - CNNモード: 4枚で5秒
+
+```
+% python main.py
+画像読み込み完了 経過時間: 0.01854681968688965
+特徴量抽出完了 経過時間: 0.341400146484375
+判定完了 経過時間: 9.799003601074219e-05
+known-face_01.jpg: True
+known-face_02.jpg: False
+known-face_03.jpg: False
+```
